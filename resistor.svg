@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="270"
+   height="180"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="resistor.svg"
+   inkscape:export-filename="/home/phooky/stamp/resistor.png"
+   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="600">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 90 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="270 : 90 : 1"
+       inkscape:persp3d-origin="135 : 60 : 1"
+       id="perspective2994" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.0270395"
+     inkscape:cx="106.29805"
+     inkscape:cy="119.68091"
+     inkscape:document-units="in"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="in"
+     inkscape:snap-global="true"
+     inkscape:window-width="1499"
+     inkscape:window-height="728"
+     inkscape:window-x="180"
+     inkscape:window-y="208"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingy="1px"
+       spacingx="1px"
+       dotted="false" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="30,150"
+       id="guide3805" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="240,110"
+       id="guide3807" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="130,150"
+       id="guide3809" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="145,85"
+       id="guide3811" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-872.35975)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.70000000000000018;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 10,50 10,30 C 10,15 15,10 30,10 l 70,0"
+       id="path2987"
+       inkscape:connector-curvature="0"
+       transform="translate(0,872.35975)"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.70000005;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 260,922.35975 0,-20 c 0,-15 -5,-20 -20,-20 l -70,0"
+       id="path2987-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.70000005;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 10,947.35975 0,20 c 0,15 5,20 20,20 l 70,0"
+       id="path2987-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.70000005;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 260,947.35975 0,20 c 0,15 -5,20 -20,20 l -70,0"
+       id="path2987-1-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:1.79999995;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3795"
+       sodipodi:cx="135"
+       sodipodi:cy="62.5"
+       sodipodi:rx="120"
+       sodipodi:ry="47.5"
+       d="m 255,62.5 a 120,47.5 0 1 1 -240,0 120,47.5 0 1 1 240,0 z"
+       transform="translate(0,872.35975)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.59999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 40,934.85975 65,0 5,17.5 10,-35 10,35 10,-35 10,35 10,-35 5,17.5 65,0"
+       id="path3801"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.7;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       id="path3797"
+       sodipodi:cx="37.5"
+       sodipodi:cy="62.5"
+       sodipodi:rx="4.5"
+       sodipodi:ry="4.5"
+       d="m 42,62.5 a 4.5,4.5 0 1 1 -9,0 4.5,4.5 0 1 1 9,0 z"
+       transform="translate(0,872.35975)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.7;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       id="path3799"
+       sodipodi:cx="232.5"
+       sodipodi:cy="62.5"
+       sodipodi:rx="4.5"
+       sodipodi:ry="4.5"
+       d="m 237,62.5 a 4.5,4.5 0 1 1 -9,0 4.5,4.5 0 1 1 9,0 z"
+       transform="translate(0,872.35975)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:none"
+       id="path3813"
+       sodipodi:cx="135"
+       sodipodi:cy="62.5"
+       sodipodi:rx="105"
+       sodipodi:ry="32.5"
+       d="M 49.924837,43.451791 A 105,32.5 0 0 1 223.75835,45.136418"
+       transform="translate(0,872.35975)"
+       sodipodi:start="3.7678281"
+       sodipodi:end="5.7195484"
+       sodipodi:open="true" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Medium"
+       id="text3833"
+       sodipodi:linespacing="125%"><textPath
+         xlink:href="#path3813"
+         id="textPath3837"><tspan
+   id="tspan3835">N Y C   R E S I S T O R</tspan></textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Medium"
+       id="text3840"
+       sodipodi:linespacing="125%"><textPath
+         xlink:href="#path3854"
+         id="textPath3870"><tspan
+   id="tspan3842">BROOKLYN NY USA</tspan></textPath></text>
+    <path
+       transform="translate(0,872.35975)"
+       style="fill:none;stroke:none"
+       d="M 65.161505,96.265369 C 107.18794,108.13748 165.70811,107.88318 206.96754,95.64914"
+       id="path3854" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 40,997.35975 -25,0 0,45.00005 25,0"
+       id="path3873"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 230,997.35975 25,0 0,45.00005 -25,0"
+       id="path3873-3"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Bold"
+       x="135"
+       y="1002.3597"
+       id="text3893"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3895"
+         x="135"
+         y="1002.3597">ISSUED   AT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Bold"
+       x="135"
+       y="1047.3597"
+       id="text3897"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3899"
+         x="135"
+         y="1047.3597">SECONDS SINCE THE EPOCH</tspan></text>
+  </g>
+</svg>
