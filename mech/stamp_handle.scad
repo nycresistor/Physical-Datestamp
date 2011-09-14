@@ -7,7 +7,7 @@ h_neck = 20;
 // 2 in ~= 50 mm
 w_stamp = 76;
 h_stamp = 50;
-t_stamp = 5;
+t_stamp = 4;
 
 module handle() {
 	union() {

@@ -18,6 +18,7 @@ volatile bool isHoming = false;
 void goToPosition(uint16_t target) {
   isDone = false;
   targetPosInSteps = target;
+  TIMSK0 = 0x02; // turn on interrupt
 }
 
 void home() {
@@ -25,6 +26,7 @@ void home() {
   targetPosInSteps = 0;
   isDone = false;
   isHoming = true;
+  TIMSK0 = 0x02; // turn on interrupt
 }
 
 bool isAtPosition() { return isDone; }
@@ -41,26 +43,22 @@ void initStepClock()
   TCCR0A = 0x02;
   TCCR0B = 0x03;
   OCR0A = 150;
-  TIMSK0 = 0x02; // turn on interrupt
+  TIMSK0 = 0x00; // turn off interrupt
 }
 
 volatile uint16_t numServoPos = 0;
+volatile uint16_t stampServoPos = 0;
+volatile uint8_t cycle = 0;
+const static uint8_t CYCLE_TOP = 8;
+const static uint8_t CYCLES_PER_MILLIS = 16000;
 
 void initServos()
 {
   NUMBERS_SERVO.setDirection(true);
   NUMBERS_SERVO.setValue(false);
 
-  // Timer 2 for the servos. 1-2ms long every 20ms.
-  // 1/1 prescaler,
-  // interrupt on OCR2A match, 
-  // OCR2A at 160.
-
-  // WGM0: 010  CS0: 001
-  TCCR2A = 0x00;
-  TCCR2B = 0x01;
-  OCR2A = 160;
-  TIMSK2 = 0x02; // turn on interrupt
+  STAMPER_SERVO.setDirection(true);
+  STAMPER_SERVO.setValue(false);
 }
 
 void initStepPins()
@@ -100,7 +98,7 @@ void init()
   PSU_PIN.setDirection(true);
   PSU_PIN.setValue(false);
   initSerial();
-  printSerial("Initializing stamper.\n");
+  printSerial((char*)"Initializing stamper.\n");
   _delay_ms(1200);
   initStepPins();
   initServos();
@@ -125,7 +123,7 @@ void processCommand() {
       val += (int)(*p - '0');
       p++;
     }
-    printSerial("OK\n");
+    printSerial((char*)"OK\n");
     goToPosition(val);
   }
   else if (*p == 'N') { // Numbers position
@@ -137,8 +135,20 @@ void processCommand() {
       val += (int)(*p - '0');
       p++;
     }
-    printSerial("OK\n");
+    printSerial((char*)"OK\n");
     numServoPos = val;
+  }
+  else if (*p == 'T') { // Stamp position
+    p++;
+    uint16_t val = 0;
+    while (*p <= '9' && 
+	   *p >= '0') {
+      val = val * 10;
+      val += (int)(*p - '0');
+      p++;
+    }
+    printSerial((char*)"OK\n");
+    stampServoPos = val;
   }
   else if (*p == 'H') { // Home stepper
     home();
@@ -156,6 +166,13 @@ int main( void )
     if (rxPending) {
       processCommand();
     }
+    NUMBERS_SERVO.setValue(true);
+    _delay_us(numServoPos);
+    NUMBERS_SERVO.setValue(false);
+    STAMPER_SERVO.setValue(true);
+    _delay_us(stampServoPos);
+    STAMPER_SERVO.setValue(false);
+    _delay_ms(15);
   }
   return 0;
 }
@@ -179,17 +196,6 @@ ISR(USART0_RX_vect)
   }
 }
 
-volatile uint16_t ticks = 0;
-const uint16_t TICK_TOP = 1000;
-
-ISR(TIMER2_COMPA_vect)
-{
-  NUMBERS_SERVO.setValue(ticks<numServoPos);
-  ticks++;
-  if (ticks > TICK_TOP) {
-    ticks = 0;
-  }
-}
 
 ISR(TIMER0_COMPA_vect)
 {
@@ -199,18 +205,21 @@ ISR(TIMER0_COMPA_vect)
       currentPosInSteps = targetPosInSteps = 0;
       isHoming = false;
       isDone = true;
+      TIMSK0 = 0x00; // turn off interrupt
       return;
     }
   }
   if (isDone || (currentPosInSteps == targetPosInSteps)) {
     X_ENABLE_PIN.setValue(true);
     isDone = true;
+    TIMSK0 = 0x00; // turn off interrupt
   } else {
     X_ENABLE_PIN.setValue(false);
     isDone = false;
     bool forward = currentPosInSteps < targetPosInSteps;
     if (!forward && !X_END_PIN.getValue()) {
       // stop!
+      TIMSK0 = 0x00; // turn off interrupt
       isDone = true;
       return;
     }
@@ -218,8 +227,6 @@ ISR(TIMER0_COMPA_vect)
     currentPosInSteps += forward?1:-1;
     X_STEP_PIN.setValue(true);
     asm volatile("nop\n\t"
-		 "nop\n\t"
-		 "nop\n\t"
 		 "nop\n\t"
 		 ::);
     X_STEP_PIN.setValue(false);

@@ -22,6 +22,9 @@
 // Servo for the number wheel
 #define NUMBERS_SERVO           Pin(PortC,4)
 
+// Servo for the stamper
+#define STAMPER_SERVO           Pin(PortC,7)
+
 // Steps per mm
 #define STEPS_PER_MM 50
 
