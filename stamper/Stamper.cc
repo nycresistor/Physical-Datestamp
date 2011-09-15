@@ -159,8 +159,8 @@ void processCommand() {
 int main( void )
 {
   init();
-  home();
-  while(!isAtPosition());
+  // home();
+  // while(!isAtPosition());
 
   while (1) {
     if (rxPending) {
